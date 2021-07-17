@@ -69,18 +69,18 @@ body{
 	width: 80%;
 	padding: 5px;
 	color: honeydew;
-	font-size: 12px;
+	font-size: 18px;
 	font-family: cursive;
   }
 
   #add_toppings{
 	padding-left:30px;
-	width:150px;
-	height:100px;
+	width:200px;
+	height:180px;
 	border: none;
 	background-color:#e2062c;
 	color:black;
-	font-size: 15px;
+	font-size: 25px;
 	font-family: cursive;
   }
 
@@ -103,13 +103,66 @@ body{
 	opacity: 1;
 	color: white;
  }
-
-#im1{
-	width:100px;
+ol.menulist>li
+{
+	padding-bottom: 20px;
+}
+.cards
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+div.card
+{
+flex: 0 0 30%;
+box-sizing: border-box;
+color: black;
+margin: 0.5rem .18em;
+background-color: blanchedalmond;
+align-items: center;
+font-size: medium;
+}
+.card img
+{
+	width: 100px;
 	height: 80px;
 }
-.pic
+#piz1
 {
-	height: 100px;
-	width: 100px;
+	font-size: 25px;
+	display: none;
+}
+#piz2
+{
+	font-size: 25px;
+	display: none;
+}
+#piz3
+{
+	font-size: 25px;
+	display: none;
+}
+#piz4
+{
+	font-size: 25px;
+	display: none;
+}
+#piz5
+{
+	font-size: 25px;
+	display: none;
+}
+#piz6
+{
+	font-size: 25px;
+	display: none;
+}
+#hide_list
+{
+	background-color: goldenrod;
+	color: black;
+	width: 200px;
+	border: none;
+	display: none;
 }

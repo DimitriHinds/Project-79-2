@@ -6,32 +6,38 @@ menu_list_array = ["Veg Margherita Pizza",
                    "Veg Extravaganza Pizza"];
 
 function getmenu(){
-var htmldata;
-htmldata="<ol class='menulist'>"
-menu_list_array.sort();
-for(var i=0;i<menu_list_array.length;i++){
-htmldata=htmldata+'<li>' + menu_list_array[i] + '</li>'
+document.getElementById("piz1").style.display= "inline-block";
+document.getElementById("piz2").style.display= "inline-block";
+document.getElementById("piz3").style.display= "inline-block";
+document.getElementById("piz4").style.display= "inline-block";
+document.getElementById("piz5").style.display= "inline-block";
+document.getElementById("piz6").style.display= "inline-block";
+document.getElementById("menu_list").style.display= "none";
+document.getElementById("hide_list").style.display= "inline-block";
 }
-htmldata=htmldata+"<ol>"
-document.getElementById("display_menu").innerHTML = htmldata;
-}
+
+function hidemenu(){
+    document.getElementById("piz1").style.display= "none";
+    document.getElementById("piz2").style.display= "none";
+    document.getElementById("piz3").style.display= "none";
+    document.getElementById("piz4").style.display= "none";
+    document.getElementById("piz5").style.display= "none";
+    document.getElementById("piz6").style.display= "none";
+    document.getElementById("menu_list").style.display= "inline-block";
+    document.getElementById("hide_list").style.display= "none";
+    }
 
 function add_item(){
 var htmldata;
-var item=document.getElementById("add_item").value;
+var item = document.getElementById("add_item").value;
+menu_list_array.push(item);
 menu_list_array.sort();
-htmldata="<section class='cards'>"
-for(var i=0;i<menu_list_array.length;i++){
+htmldata = "<section class='cards'>";
+for(var i=0;i<menu_list_array.length;i++) {
 htmldata=htmldata+'<div class="card">'
-+'<img class="pic" src="pizzaImg.png"/>'
++'<img src="pizzaImg.png"/>'
 + menu_list_array[i] + '</div>'
 }
 htmldata=htmldata+"</section>"
 document.getElementById("display_addedmenu").innerHTML = htmldata;
-}
-
-function add_top(){
-    var item=document.getElementById("add_item").value;
-    menu_list_array.push(item);
-    add_item();
 }
